@@ -23,10 +23,10 @@
 :root {
     /* Background Color */
     --primary-color: #f39b9b;
-    --secondary-color: hsla(0, 100%, 90%, 0.3);
+    --secondary-color: hsl(231, 100%, 1%);
     --bg-dark-blue: #091020;
-    --bg-white: #fff;
-    --gray-color: #e02a2abf;
+    --bg-white: rgb(255, 255, 255);
+    --buttonred-color: #e02a2abf;
     --gradient-color: linear-gradient(-224deg, var(--primary-color) 0, #337DFF 100%);
     --gradient-text: linear-gradient(120deg, #1C99FE 20.69%, #7644FF 50.19%, var(--primary-color) 79.69%);
     filter: progid:DXImageTransform.Microsoft.gradient(startColorstr='var(--primary-color)', endColorstr='var(--secondary-color)', GradientType=1);
@@ -34,8 +34,8 @@
     /* Text Color */
     --primary-font:'Poppins', sans-serif;
     --primary-text: #FD4766;
-    --text-gray: #01010cbf;
-    --text-white: rgb(179, 13, 13);
+    --text-white: #f7f7f7;
+    --text-red: rgba(247, 100, 100, 0.466);
 }
 
 body {
@@ -77,8 +77,8 @@ section {
     transition: all .4s ease-in-out;
     padding: 10px 27px;
     background-color: transparent;
-    border: 2px solid var(--gray-color);
-    color: var(--text-gray);
+    border: 2px solid var(--buttonred-color);
+    color: var(--text-white);
     font-weight: 500;
     font-size: 14px;
     text-transform: uppercase;
@@ -89,14 +89,14 @@ section {
 .main-btn:hover {
     background-color: var(--primary-color);
     border-color: var(--primary-color);
-    color: var(--text-white);
+    color: var(--text-red);
 }
 
 h1 {
     font-size: 54px;
     line-height: 68px;
     font-weight: 800;
-    color: var(--text-white);
+    color: var(--text-red);
     margin-bottom: 20px;
 }
 
@@ -108,7 +108,7 @@ h2 {
     font-size: 50px;
     line-height: 1.3;
     font-weight: 600;
-    color: var(--text-white);
+    color: var(--text-red);
     margin-bottom: 15px;
 }
 
@@ -116,11 +116,11 @@ h3 {
     margin-bottom: 19px;
     font-weight: 600;
     font-size: 20px;
-    color: var(--text-white);
+    color: var(--text-red);
 }
 
 h6 {
-    color: var(--text-gray);
+    color: var(--text-white);
     font-size: 15px;
     text-transform: uppercase;
     letter-spacing: 4px;
@@ -129,7 +129,7 @@ h6 {
 }
 
 p {
-    color: var(--text-gray);
+    color: var(--text-white);
     font-size: 16px;
     line-height: 28px;
     letter-spacing: 1px;
@@ -159,6 +159,7 @@ button {
 }
 
 /* 2 Navbar */
+/* (.) for classes and (#) for id */
 .header_wrapper .navbar {
     padding:15px 0;
     -webkit-transition: all .2s linear;
@@ -166,14 +167,14 @@ button {
     transition: all .2s linear;
 }
 
-.header_wrapper .navbar-brand img {
-    max-width: 120px;
+/* .header_wrapper .navbar-brand img {
+    max-width: 100px;
     height: auto;
-}
+} */
 
 .header_wrapper .navbar-toggler {
     border: 0;
-    color: var(--gray-color);
+    color: var(--buttonred-color);
     line-height:2;
 }
 
@@ -189,7 +190,7 @@ button {
     position: relative;
     font-size: 16px;
     font-weight: 500;
-    color: var(--text-gray);
+    color: var(--text-white);
     display:inline-block;
 }
 
@@ -211,7 +212,7 @@ button {
 
 .header_wrapper .nav-item .nav-link.active,
 .header_wrapper .nav-item .nav-link:hover {
-    color: var(--text-white);
+    color: var(--text-red);
 }
 
 .header-scrolled {
@@ -228,6 +229,112 @@ button {
 .header-scrolled .nav-item .nav-link:hover {
     color: var(--primary-text);
 }
+
+/* 3 Banner */
+.banner_wrapper {
+    width: 100%;
+    height: auto;
+    min-height: 650px;
+    /* background-image: url('../images/background.png'); */
+    background-repeat: no-repeat;
+    background-position: center center;
+    background-size: cover;
+    background-attachment: fixed;
+    padding: 200px 0 100px 0;
+
+}
+
+/* particles js */
+#particles-js
+{
+height: 100%;
+background: #0f0101;
+}
+
+canvas.particles-js-canvas-el
+{
+position: absolute;
+height: 100% !important;
+width: 100%;
+top: 0;
+right: 0;
+left:0;
+z-index: -1000;
+margin: 0px;
+}
+
+/* 4 About */
+.about_wrapper .container .img-fluid{
+    width: 92%;  
+}
+.about_wrapper ul.nav-pills {
+    border: 1px solid var(--buttonred-color);
+    border-radius: 50px;
+}
+
+.about_wrapper ul li .nav-link {
+    border-radius: 50px;
+    font-size: 15px;
+    font-weight: 500;
+    transition: all 0.45s cubic-bezier(0, 0, 0.2, 1);
+    display: inline-block;
+    color: var(--text-red);
+    border: 0;
+    transition: 0.3s;
+}
+
+.about_wrapper ul li .nav-link.active {
+    background-color: var(--primary-color);
+}
+
+.about_wrapper .single-progress {
+    margin-top: 26px;
+    position: relative;
+    overflow: hidden;
+}
+
+.about_wrapper .single-progress .progress {
+    height: 4px;
+    border-radius: 4px;
+    box-shadow: none;
+    background-color: var(--bg-white);
+    overflow: visible;
+}
+
+.about_wrapper .progress-bar {
+    background-color: var(--primary-color);
+    background-image: var(--gradient-color);
+}
+
+.about_wrapper .single-progress h6 {
+    text-align: left;
+}
+
+.about_wrapper .single-progress .label {
+    position: absolute;
+    right: 0;
+    top: 0;
+    color: var(--text-white);
+    font-size: 15px;
+}
+
+.about_wrapper .tab-pane li {
+    color: var(--buttonred-color);
+    font-size: 16px;
+    margin-bottom: 15px;
+    font-weight: 300;
+    list-style: none;
+}
+
+.about_wrapper .tab-pane li a {
+    font-weight: 500;
+    display: block;
+    color: var(--text-white);
+}
+
+/* 4 Services */
+
+
 
 
       
