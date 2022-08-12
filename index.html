@@ -5,10 +5,10 @@
     <!-- meta is important for responsive view in mobile phones -->
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>My Portfolio</title>
+    <title>Disha's Portfolio</title>
 
     <!-- FAVICON -->
-    <link rel="icon" type="image/png" href="images/favicon.png">
+    <link rel="icon" type="image/png" href="">
 
     <!-- Bootstrap 5 CDN Links -->
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/twitter-bootstrap/5.1.0/css/bootstrap.min.css">
@@ -27,10 +27,6 @@
 <header class="header_wrapper">
     <nav class="navbar navbar-expand-lg fixed-top">
         <div class="container">
-            <a class="navbar-brand" href="#">
-                <!-- <img src="Images/logo2.png" class="img-fluid" alt="logo"> -->
-            </a>
-
             <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNav"
                 aria-controls="navbarNav" aria-expanded="false" aria-label="Toggle navigation">
                 <!-- <span class="navbar-toggler-icon"></span> -->
@@ -46,11 +42,9 @@
                         <a class="nav-link" href="#about">About</a>
                     </li>
                     <li class="nav-item">
-                        <a class="nav-link" href="#services">Services</a>
+                        <a class="nav-link" href="#services">Works</a>
                     </li>
-                    <li class="nav-item">
-                        <a class="nav-link" href="#portfolio">Portfolio</a>
-                    </li>
+                   
                     <li class="nav-item">
                         <a class="nav-link" href="#contact">Contact</a>
                     </li>
@@ -69,10 +63,10 @@
     <div class="container">
         <div class="row">
             <div class="col-sm-12 text-center text-md-start">
-                <h6>WELCOME TO MY WORLD</h6>
-                <h1>I’m Disha Singh<br><span>Software Developer</span><br>based in India.</h1>
+                <h6>WELCOME TO MY PORTFOLIO</h6>
+                <h1>I’m Disha Singh<br><span class="auto-type"></span><br>based on India.</h1>
                 <div class="mt-4">
-                    <a class="main-btn" href="resume/resume.docx">Download CV</a>
+                    <a class="main-btn" href="Resume/DishaResume.pdf">Download CV</a>
                 </div>
             </div>
         </div>
@@ -103,7 +97,7 @@
                         <li class="nav-item" role="presentation">
                             <button class="nav-link" id="pills-experiance-tab" data-bs-toggle="pill"
                                 data-bs-target="#pills-experiance" type="button" role="tab"
-                                aria-controls="pills-experiance" aria-selected="false">Experiance</button>
+                                aria-controls="pills-experiance" aria-selected="false">Experience</button>
                         </li>
                         <li class="nav-item" role="presentation">
                             <button class="nav-link" id="pills-education-tab" data-bs-toggle="pill"
@@ -149,6 +143,15 @@
                                     </div>
                                 </div>
                                 <span class="label">70%</span>
+                            </div>
+                            <div class="single-progress">
+                                <h6>Bootstrap</h6>
+                                <div class="progress">
+                                    <div class="progress-bar" role="progressbar" style="width: 80%"
+                                        aria-valuenow="0" aria-valuemin="0" aria-valuemax="100">
+                                    </div>
+                                </div>
+                                <span class="label">60%</span>
                             </div>
                             <div class="single-progress">
                                 <h6>React Js</h6>
@@ -203,9 +206,57 @@
 <!-- About section exit -->
 
 
-<!-- Services section -->
+<!-- Work section -->
+<section id="services" class="services_wrapper">
+    <div class="container">
+        <div class="row">
+            <div class="col-sm-12 text-center mb-4">
+                <span class="subtitle">What Work I do</span>
+                <h2>My Awesome Work</h2>
+                
+            </div>
+        </div>
+        <div class="row">
+            <div class="col-lg-4 col-md-6 mb-4">
+                <div class="card">
+                    <div class="card-body text-md-start text-center">
+                        <h3>Website Development</h3>
+                        <p> I can offer a variety of website design and development services, from creating web development solutions and responsive website designs. Fully customized & responsive websites.</p>
+        
+                    </div>
+                </div>
+            </div>
+            <div class="col-lg-4 col-md-6 mb-4">
+                <div class="card">
+                    <div class="card-body text-md-start text-center">
+                        
+                        <h3>Freelance Work</h3>
+                        <p> I can offer a variety of freelance work like web development, making posters & banners, making painting.</p>
+                        
+                    </div>
+                </div>
+            </div>
+            <div class="col-lg-4 col-md-6 mb-4">
+                <div class="card">
+                    <div class="card-body text-md-start text-center">
+                        <h3>Backend Coding</h3>
+                        <p> I can also work on backend implementation. My Skills are Java, Spring framework, Spring Boot & Rest API</p>  
+                    </div>
+                </div>
+            </div>
+            <div class="col-lg-4 col-md-6 mb-4">
+                <div class="card">
+                    <div class="card-body text-md-start text-center">
+                        <h3>Painting & Art</h3>
+                        <p> I also love to paint and create creative stuff like bottle art, Traditional Painting, Landscape painting and many more.</p>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+</section>
+<!-- work section exit -->
 
-<!-- Services section exit -->
 
 
   <!-- Bootstrap 5 JS CDN Links -->
@@ -218,6 +269,18 @@
   <div id="particles-js"></div>
   <script type="text/javascript" src="JS/particles.js"></script>
   <script type="text/javascript" src="JS/app.js"></script>
+
+  <script src="https://cdn.jsdelivr.net/npm/typed.js@2.0.12"></script>
+
+  <script>
+    var typed = new Typed(".auto-type", {
+        strings : ["Developer", "Coder", "Artist", " Freelance Web Developer", "Traveller"],
+        typeSpeed: 80,
+        backSpeed: 70,
+        loop: true
+        });
+
+  </script>
 
 
 </body>

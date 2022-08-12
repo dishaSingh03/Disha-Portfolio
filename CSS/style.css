@@ -4,8 +4,7 @@
 2. Navbar
 3. Banner
 4. About
-5. Services
-6. Portfolio
+5. Works
 6. Contact
 7. Footer
 -------------------- */
@@ -29,7 +28,8 @@
     --buttonred-color: #e02a2abf;
     --gradient-color: linear-gradient(-224deg, var(--primary-color) 0, #337DFF 100%);
     --gradient-text: linear-gradient(120deg, #1C99FE 20.69%, #7644FF 50.19%, var(--primary-color) 79.69%);
-    filter: progid:DXImageTransform.Microsoft.gradient(startColorstr='var(--primary-color)', endColorstr='var(--secondary-color)', GradientType=1);
+    /* The filter property defines visual effects (like blur and saturation) to an element (often <img>). */
+    /* filter: progid:DXImageTransform.Microsoft.gradient(startColorstr='var(--primary-color)', endColorstr='var(--secondary-color)', GradientType=1); */
 
     /* Text Color */
     --primary-font:'Poppins', sans-serif;
@@ -45,18 +45,27 @@ body {
 
 a {
     text-decoration: none;
+    position:relative;
+    /* The z-index property specifies the stack order of an element. An element with greater stack order is always in front of an element with a lower stack order. z-index only works on positioned elements */
+    z-index:10;
 }
 
 /* 1 Custom CSS */
 /* webkit is used for browser support. webkit comes for chrome and safari. When we use webkit then scrollbar can be custom in chrome */
+
+/*  pseudo-elements to customize various parts of the scrollbar for WebKit browsers: */
+
+/* ::-webkit-scrollbar — the entire scrollbar. */
 ::-webkit-scrollbar {
     width: 6px;
 }
 
+/* ::-webkit-scrollbar-button — the buttons on the scrollbar (arrows pointing upwards and downwards that scroll one line at a time). */
 ::-webkit-scrollbar-track {
     background: var(--bg-dark-blue);
 }
 
+/* :-webkit-scrollbar-thumb — the draggable scrolling handle. */
 ::-webkit-scrollbar-thumb {
     background: var(--primary-color);
 }
@@ -167,11 +176,6 @@ button {
     transition: all .2s linear;
 }
 
-/* .header_wrapper .navbar-brand img {
-    max-width: 100px;
-    height: auto;
-} */
-
 .header_wrapper .navbar-toggler {
     border: 0;
     color: var(--buttonred-color);
@@ -201,7 +205,7 @@ button {
     width: 0;
     height: 2px;
     background: var(--primary-color);
-    transition: 0.3s;
+    transition: 0.5s;
     bottom: 0;
 }
 
@@ -243,23 +247,24 @@ button {
     padding: 200px 0 100px 0;
 
 }
-
+/* particles.js is a light weight javascript library used for creating particles which looks like verticles of polygon. Interact by hovering over it*/
 /* particles js */
 #particles-js
 {
 height: 100%;
 background: #0f0101;
+
 }
 
 canvas.particles-js-canvas-el
 {
 position: absolute;
-height: 100% !important;
+height: 100% ;
 width: 100%;
 top: 0;
 right: 0;
 left:0;
-z-index: -1000;
+/* z-index: -1000; */
 margin: 0px;
 }
 
@@ -332,7 +337,23 @@ margin: 0px;
     color: var(--text-white);
 }
 
-/* 4 Services */
+/* 4 Works */
+.services_wrapper .card {
+    background-color: var(--bg-dark-blue);
+    cursor: pointer;
+    transition: transform 0.65s cubic-bezier(0.05, 0.2, 0.1, 1);
+    box-shadow: 0.65s cubic-bezier(0.05, 0.2, 0.1, 1);
+}
+
+.services_wrapper .card:hover {
+    box-shadow: 0px 2px 70px 0px rgb(253 71 102 / 5%);
+    transform: translateY(-5px);
+}
+
+
+
+
+
 
 
 

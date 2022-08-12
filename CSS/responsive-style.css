@@ -43,12 +43,18 @@
 
     }
 
-    /* portfolio */
-    .portfolio_wrapper .card {
-        min-height: 400px;
-    }
+   
 
 }
+
+/* The @media rule is used in media queries to apply different styles for different media types/devices.
+
+Media queries can be used to check many things, such as:
+
+width and height of the viewport
+width and height of the device
+orientation (is the tablet/phone in landscape or portrait mode?)
+resolution */
 
 @media (max-width: 767px) {
 
@@ -77,8 +83,4 @@
         font-size: 13px;
     } 
 
-    /* portfolio */
-    .portfolio_wrapper .card {
-        min-height: 500px;
-    }
-} 
+}
