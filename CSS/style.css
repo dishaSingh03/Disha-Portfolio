@@ -30,6 +30,7 @@
     --gradient-text: linear-gradient(120deg, #1C99FE 20.69%, #7644FF 50.19%, var(--primary-color) 79.69%);
     /* The filter property defines visual effects (like blur and saturation) to an element (often <img>). */
     /* filter: progid:DXImageTransform.Microsoft.gradient(startColorstr='var(--primary-color)', endColorstr='var(--secondary-color)', GradientType=1); */
+    
 
     /* Text Color */
     --primary-font:'Poppins', sans-serif;
@@ -61,6 +62,7 @@ a {
 }
 
 /* ::-webkit-scrollbar-button — the buttons on the scrollbar (arrows pointing upwards and downwards that scroll one line at a time). */
+/* ::-webkit-scrollbar-track — the track (progress bar) of the scrollbar, where there is a gray bar on top of a white bar. */
 ::-webkit-scrollbar-track {
     background: var(--bg-dark-blue);
 }
@@ -337,7 +339,7 @@ margin: 0px;
     color: var(--text-white);
 }
 
-/* 4 Works */
+/* 5 Works */
 .services_wrapper .card {
     background-color: var(--bg-dark-blue);
     cursor: pointer;
@@ -350,6 +352,67 @@ margin: 0px;
     transform: translateY(-5px);
 }
 
+/* 6 Contact */
+.contact_wrapper .form-control,
+.contact_wrapper textarea {
+    background-color: transparent;
+    border-color: var(--gray-color);
+    color: var(--text-gray);
+    font-size: 15px;
+    font-weight: 400;
+    padding: 10px 20px;
+}
+.contact_wrapper .form-control:hover,
+.contact_wrapper textarea:hover,
+.contact_wrapper .form-control:focus,
+.contact_wrapper textarea:focus { 
+    border-color: var(--primary-color);
+    color: var(--text-white); 
+}  
+.contact_wrapper .call_details{
+    color:var(--text-white);
+}
+.contact_wrapper .call_details a{
+    font-weight: 700;
+    color:var(--text-white);
+}
+
+/* 7 footer */
+.footer_wrapper {
+    background-color: var(--bg-dark-blue);
+    padding: 20px 0;
+}
+
+.footer_wrapper .social-icon li {
+    margin: 6px;
+}
+
+.footer_wrapper .social-icon a {
+    width: 35px;
+    height: 35px;
+    line-height: 30px;
+    font-size: 14px;
+    display: inline-block;
+    border: 2px solid var(--text-gray);
+    color: var(--text-gray);
+    text-align: center;
+    border-radius: 100%;
+    transition: all 0.3s cubic-bezier(0.645, 0.045, 0.355, 1);
+}
+
+.footer_wrapper .social-icon a:hover {
+    background-color: var(--primary-color);
+    border-color: var(--primary-color);
+    color: var(--text-white);
+    transform: translateY(-3px);
+}
+.footer_wrapper .copyright-text p{
+    font-size:11px;
+    line-height: 20px;
+}
+.footer_wrapper .copyright-text a {
+    color: var(--primary-color);
+}
 
 
 
